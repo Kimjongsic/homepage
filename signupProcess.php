@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("us-cdbr-east-03.cleardb.com", "b7ef317dd8b55f", "21689411", "signup", 3306);
+$conn = mysqli_connect("localhost", "root", "jongsic919", "signup", 3306);
 $hashedPassword = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 echo $hashedPassword;
 $sql = "
