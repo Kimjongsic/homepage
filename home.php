@@ -51,7 +51,7 @@ session_start();
             <div class="user">
         <?php
         if(isset($_SESSION['userId'])){
-            echo $_SESSION['first'];
+            echo $_SESSION['userName'];
         }
         ?>
             </div>  
