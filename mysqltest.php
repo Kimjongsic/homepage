@@ -19,7 +19,7 @@ $cleardb_db = substr($cleardb_url["heroku_0dc45199750e451"],1);
 $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
-$conn = mysqli_connect('127.0.0.1', $cleardb_username, $cleardb_password, $cleardb_db);
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 if($conn) {
     echo "connect : 성공<br>";
