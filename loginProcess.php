@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 $hashedPassword = $row['pw'];
 $row['id'];
-$first = mb_substr($row['name'],0,1,'utf-8');
+$first = substr($row['name'],0,1);
 
 foreach($row as $key => $r){
     echo "{$key} : {$r} <br>";
