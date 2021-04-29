@@ -45,8 +45,8 @@
             </div>
         </div>
         <a href="login.php" class="loginBtn">로그인</a>
-        <a href="mysqltest.php">DB 연결 확인</a>
-        <a href="phpinfo.php">php정보확인</a>
+        <!-- <a href="mysqltest.php">DB 연결 확인</a> -->
+        <!-- <a href="phpinfo.php">php정보확인</a> -->
     </header>
     <section class="name">
         <span>S</span><span>i</span><span>m</span><span>w</span><span>o</span><span>n</span>
