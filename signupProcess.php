@@ -12,11 +12,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 
 $hashedPassword = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 echo $hashedPassword;
-$sql = "
-    INSERT INTO members
-    (id, pw, name, birthday, gender)
-    VALUES('{$_POST['user_id']}', '{$hashedPassword}', '{$_POST['user_name']}', '{$_POST['user_year']}', '{$_POST['user_gender']}'
-    )";
+$sql = "INSERT INTO members(id, pw, name, birthday, gender) VALUES('{$_POST['user_id']}', '{$hashedPassword}', '{$_POST['user_name']}', '{$_POST['user_year']}', '{$_POST['user_gender']}')";
 echo $sql;
 $result = mysqli_query($conn, $sql);
 
