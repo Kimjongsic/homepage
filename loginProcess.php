@@ -17,7 +17,7 @@ $id = $_POST['user_id'];
 $password = $_POST['user_pw'];
 
 // DB 정보 가져오기 
-$sql = "SELECT * FROM member WHERE id ='{$id}'";
+$sql = "SELECT * FROM members WHERE id ='{$id}'";
 $result = mysqli_query($conn, $sql);
 
 $row = mysqli_fetch_array($result);
