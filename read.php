@@ -21,6 +21,8 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 		$fet = mq("update mathboard set hit = '".$hit."' where num = '".$bno."'");
 		$sql = mq("select * from mathboard where num='".$bno."'"); /* 받아온 idx값을 선택 */
 		$board = $sql->fetch_array();
+        $pw1 = $_POST['pw'];
+        $pw2 = $board['pw'];
 	?>
 <!-- 글 불러오기 -->
 <div id="board_read">
@@ -33,10 +35,18 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 				<?php echo nl2br("$board[content]"); ?>
 			</div>
 	<!-- 목록, 수정, 삭제 -->
+    <?php 
+    function Verify() {
+        if(password_verify($pw1, $pw2)) { ?>
+            <script>location.href='modify.php';</script> 
+        <?php } else{ ?>
+            <script>alert('본인 글이 아닙니다.');</script>
+            <?php }
+    } ?>
 	<div id="bo_ser">
 		<ul>
 			<li><a href="mathboard.php">[목록으로]</a></li>
-			<li><a href="modify.php?num=<?php echo $board['num']; ?>">[수정]</a></li>
+			<li><a href="#" onClick="Verify();">[수정]</a></li>
 			<li><a href="delete.php?num=<?php echo $board['num']; ?>">[삭제]</a></li>
 		</ul>
 	</div>
