@@ -1,0 +1,41 @@
+<?php 
+include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+		$bno = $_GET['num']; /* bno함수에 idx값을 받아와 넣음*/
+		$hit = mysqli_fetch_array(mq("select * from mathboard where num ='".$bno."'"));
+		$hit = $hit['hit'] + 1;
+		$fet = mq("update mathboard set hit = '".$hit."' where num = '".$bno."'");
+		$sql = mq("select * from mathboard where num='".$bno."'"); /* 받아온 idx값을 선택 */
+		$board = $sql->fetch_array();
+	?>
+<!-- 글 불러오기 -->
+<div id="board_read">
+	<h2><?php echo $mathboard['title']; ?></h2>
+		<div id="user_info">
+			<?php echo $mathboard['name']; ?> <?php echo $mathboard['date']; ?> 조회:<?php echo $mathboard['hit']; ?>
+				<div id="bo_line"></div>
+			</div>
+			<div id="bo_content">
+				<?php echo nl2br("$mathboard[content]"); ?>
+			</div>
+	<!-- 목록, 수정, 삭제 -->
+	<div id="bo_ser">
+		<ul>
+			<li><a href="/">[목록으로]</a></li>
+			<li><a href="modify.php?num=<?php echo $board['num']; ?>">[수정]</a></li>
+			<li><a href="delete.php?num=<?php echo $board['num']; ?>">[삭제]</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

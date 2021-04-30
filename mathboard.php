@@ -38,7 +38,7 @@
         <tbody>
             <tr>
                 <td width="70"><?php echo $mathboard['num']; ?></td>
-                <td width="500"><a href=""><?php echo $title; ?></a></td>
+                <td width="500"><a href="read.php?num=<?php echo $mathboard["num"];?>"><?php echo $title; ?></a></td>
                 <td width="120"><?php echo $mathboard['name']; ?></td>
                 <td width="100"><?php echo $mathboard['date']; ?></td>
                 <td width="100"><?php echo $mathboard['hit']; ?></td>
