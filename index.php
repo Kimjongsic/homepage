@@ -61,10 +61,10 @@
     </section>
     <section class="container">
         <div id="cont" class="container_menu">
-                <a href="" class="tile">
-                    <i class="fas fa-bell" style="color: rgb(66, 133, 244);"></i>
+                <a href="mathboard.php" class="tile">
+                    <i class="fas fa-square-root-alt" style="color: rgb(66, 133, 244);"></i>
                     <div class="tile_name">
-                        <span>공지사항</span>
+                        <span>Math Field</span>
                     </div>
                 </a>
                 <a href="" class="tile">
