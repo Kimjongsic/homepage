@@ -80,7 +80,9 @@
                     </div>
                 </a>
                 <a href="" class="tile">
-                    <img src="\icon\hangul_icon.svg" alt="" class="hangul_icon">
+                    <div class="tileicon_bg">
+                        <img src="\icon\hangul_icon.svg" alt="" class="hangul_icon">
+                    </div>
                     <div class="tile_name">
                         <span>Kor Field</span>
                     </div>

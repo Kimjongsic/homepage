@@ -269,7 +269,7 @@ body {
 .tile:hover {
     background-color: rgba(32, 33, 36,.1);
 }
-.hangul_icon {
+.tileicon_bg {
     align-items: center;
     display: flex;
     background-color: rgba(241, 243, 244, 1);
