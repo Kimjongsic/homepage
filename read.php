@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 	<div id="bo_ser">
 		<ul>
 			<li><a href="mathboard.php">[목록으로]</a></li>
-			<li><a href="#" onClick="Verify();">[수정]</a></li>
+			<li><a href="#" onclick="Verify();">[수정]</a></li>
 			<li><a href="delete.php?num=<?php echo $board['num']; ?>">[삭제]</a></li>
 		</ul>
 	</div>
