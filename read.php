@@ -20,18 +20,18 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 	?>
 <!-- 글 불러오기 -->
 <div id="board_read">
-	<h2><?php echo $mathboard['title']; ?></h2>
+	<h2><?php echo $board['title']; ?></h2>
 		<div id="user_info">
-			<?php echo $mathboard['name']; ?> <?php echo $mathboard['date']; ?> 조회:<?php echo $mathboard['hit']; ?>
+			<?php echo $board['name']; ?> <?php echo $board['date']; ?> 조회:<?php echo $board['hit']; ?>
 				<div id="bo_line"></div>
 			</div>
 			<div id="bo_content">
-				<?php echo nl2br("$mathboard[content]"); ?>
+				<?php echo nl2br("$board[content]"); ?>
 			</div>
 	<!-- 목록, 수정, 삭제 -->
 	<div id="bo_ser">
 		<ul>
-			<li><a href="/">[목록으로]</a></li>
+			<li><a href="mathboard.php">[목록으로]</a></li>
 			<li><a href="modify.php?num=<?php echo $board['num']; ?>">[수정]</a></li>
 			<li><a href="delete.php?num=<?php echo $board['num']; ?>">[삭제]</a></li>
 		</ul>
