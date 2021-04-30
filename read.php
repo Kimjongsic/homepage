@@ -48,7 +48,7 @@ include "password.php"
 	<div id="bo_ser">
 		<ul>
 			<li><a href="mathboard.php">[목록으로]</a></li>
-			<li><a href="#" onclick="<?php echo "Verify()"; ?>;">[수정]</a></li>
+			<li><a href="modify.php?num=<?php echo $board['num']; ?>">[수정]</a></li>
 			<li><a href="delete.php?num=<?php echo $board['num']; ?>">[삭제]</a></li>
 		</ul>
 	</div>
