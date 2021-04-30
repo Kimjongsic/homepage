@@ -37,11 +37,12 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 	<!-- 목록, 수정, 삭제 -->
     <?php 
     function Verify() {
-        if(password_verify($pw1, $pw2)) { ?>
-            <script>location.href='modify.php';</script> 
-        <?php } else{ ?>
-            <script>alert('본인 글이 아닙니다.');</script>
-            <?php }
+        if(password_verify($pw1, $pw2)) {
+           echo "<script>location.href='modify.php';</script>";
+            }
+        else{
+            echo "<script>alert('본인 글이 아닙니다.');</script>";
+         }
     } ?>
 	<div id="bo_ser">
 		<ul>
