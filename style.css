@@ -269,6 +269,11 @@ body {
 .tile:hover {
     background-color: rgba(32, 33, 36,.1);
 }
+.hangul_icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(65%) sepia(95%) saturate(4788%) hue-rotate(201deg) brightness(100%) contrast(92%);
+}
 
 @media screen and (max-width: 605px){
     .name {

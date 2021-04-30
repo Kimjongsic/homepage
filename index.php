@@ -68,21 +68,21 @@
                     </div>
                 </a>
                 <a href="" class="tile">
-                    <i class="fas fa-mail-bulk" style="color: rgb(234, 67, 53);"></i>
+                    <i class="fas fa-font" style="color: rgb(234, 67, 53);"></i>
                     <div class="tile_name">
-                        <span>가정통신문</span>
+                        <span>Eng Field</span>
                     </div>
                 </a>
                 <a href="" class="tile">
-                    <i class="far fa-calendar-alt" style="color: rgb(251, 188, 5);"></i>
+                    <i class="fas fa-flask" style="color: rgb(251, 188, 5);"></i>
                     <div class="tile_name">
-                        <span>이달의행사</span>
+                        <span>Sci Field</span>
                     </div>
                 </a>
                 <a href="" class="tile">
-                    <i class="fas fa-utensils" style="color: rgb(66, 133, 244);"></i>
+                    <img src="\icon\hangul_icon.svg" alt="" class="hangul_icon">
                     <div class="tile_name">
-                        <span>이달의식단</span>
+                        <span>Kor Field</span>
                     </div>
                 </a>
                 <a href="" class="tile">
