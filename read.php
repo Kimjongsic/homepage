@@ -22,6 +22,7 @@ include "password.php"
 		$fet = mq("update mathboard set hit = '".$hit."' where num = '".$bno."'");
 		$sql = mq("select * from mathboard where num='".$bno."'"); /* 받아온 idx값을 선택 */
 		$board = $sql->fetch_array();
+		// $sql2 = mq("select * from members where ")
         $pw1 = $_POST['pw'];
         $pw2 = $board['pw'];
 	?>
