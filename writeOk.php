@@ -31,6 +31,6 @@ if($username  && $title && $content){
 <body>
     <?php echo $_POST['pw'] ?>
     <br>
-    <?php $userpw ?>
+    <?php echo $userpw ?>
 </body>
 </html>
