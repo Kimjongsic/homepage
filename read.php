@@ -1,6 +1,6 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
-include "password.php"
+include "password.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
