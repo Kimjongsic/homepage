@@ -3,7 +3,7 @@ $bno = $_GET['num'];
 $sql = mq("select * from mathboard where num='$bno';");
 $board = $sql->fetch_array();
 
-if ($_board['pw']) {
+if ($board['pw']) {
     if ($_SESSION['userName']==$board['name']) {?>
         <script>location.href="read.php?num=<?php echo $board['num'];?>"</script>
     <?php }
