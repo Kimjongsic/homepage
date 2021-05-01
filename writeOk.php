@@ -5,7 +5,8 @@ include "password.php";
 
 //각 변수에 write.php에서 input name값들을 저장한다
 $username = $_SESSION['userName'];
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
+if(isset($_POST['pw'])) {$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);}
+else {$userpw = $_POST['pw'];}
 $title = $_POST['title'];
 $content = $_POST['content'];
 $date = date('Y-m-d');
