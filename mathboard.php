@@ -1,4 +1,6 @@
-<?php include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php"; ?>
+<?php 
+include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

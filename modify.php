@@ -19,6 +19,7 @@
     <title>Document</title>
 </head>
 <body>
+<?php if ($_SESSION['userName']==$board['name']) {?>
 <div id="board_write">
         <h1><a href="mathboard.php">수학 게시판</a></h1>
         <h4>글을 수정합니다.</h4>
@@ -43,6 +44,13 @@
                     </div>
                 </form>
             </div>
-        </div>
+</div>
+<?php 
+} else { ?>
+    <script>
+        alert("본인 글이 아닙니다.");
+        location.href = "read.php?num=<?php echo $board['num'];?>"
+    </script>
+<?php }?>
 </body>
 </html>

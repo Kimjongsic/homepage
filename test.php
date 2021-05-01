@@ -1,6 +1,3 @@
-<?php
-include "loginProcess.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +7,6 @@ include "loginProcess.php";
     <title>Document</title>
 </head>
 <body>
-    <?php echo $row['name']; ?>
+    
 </body>
 </html>

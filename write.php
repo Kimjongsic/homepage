@@ -14,7 +14,6 @@
     <h1>수학 게시판</h1>
         <form action="writeOk.php" method="post">
             <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
-            <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required></textarea>
             <textarea name="content" id="ucontent" placeholder="내용" required></textarea>
             <input type="password" name="pw" id="upw"  placeholder="비밀번호" required />
             <button type="submit">글 작성</button>

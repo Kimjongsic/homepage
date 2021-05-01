@@ -4,7 +4,7 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 include "password.php";
 
 //각 변수에 write.php에서 input name값들을 저장한다
-$username = $_POST['name'];
+$username = $_SESSION['userName'];
 $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 $title = $_POST['title'];
 $content = $_POST['content'];
