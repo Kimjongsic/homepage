@@ -44,7 +44,11 @@ include "password.php"
         else{
             echo "<script>alert('본인 글이 아닙니다.');</script>";
          }
-    } ?>
+    } 
+	if (isset($_GET['num'])) {
+		Verify();
+	}
+	?>
 	<div id="bo_ser">
 		<ul>
 			<li><a href="mathboard.php">[목록으로]</a></li>
