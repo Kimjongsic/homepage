@@ -16,7 +16,7 @@ if(isset($_POST['pw'])){
 }
 if($username && $title && $content){
     $sql = mq("insert into mathboard(name,pw,title,content,date,lock_post) values('".$username."','".$userpw."','".$title."','".$content."','".$date."','".$lo_post."')"); 
-    echo $lo_post; $_POST['pw'];"<script>
+    echo $lo_post; $_POST['pw']; "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='mathboard.php';</script>";
 }else{
