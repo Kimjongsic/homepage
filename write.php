@@ -1,9 +1,5 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
-   
-	$bno = $_GET['num'];
-	$sql = mq("select * from mathboard where num='$bno';");
-	$board = $sql->fetch_array();
  ?>
 
 <!DOCTYPE html>
