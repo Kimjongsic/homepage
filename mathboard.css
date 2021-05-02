@@ -5,3 +5,8 @@ body {
 a {
     text-decoration: none;
 }
+
+#write_btn {
+    width: 500px;
+    height: 100px;
+}
