@@ -16,7 +16,7 @@
 </head>
 <body>
 <?php if (empty($_SESSION['userId'])) {?>
-        <script>location.href="login.php"</script>
+        <script>history.back();</script>
 <?php } else {?>
             <h1>수학 게시판</h1>
                 <form action="writeOk.php" method="post">
