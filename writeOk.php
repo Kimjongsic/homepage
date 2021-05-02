@@ -9,10 +9,10 @@ $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 $title = $_POST['title'];
 $content = $_POST['content'];
 $date = date('Y-m-d');
-if(isset($_POST['pw'])){
-	$lo_post = '1';
-}else{
+if(empty($_POST['pw'])){
 	$lo_post = '0';
+}else{
+	$lo_post = '1';
 }
 if($username && $title && $content){
     $sql = mq("insert into mathboard(name,pw,title,content,date,lock_post) values('".$username."','".$userpw."','".$title."','".$content."','".$date."','".$lo_post."')"); 
