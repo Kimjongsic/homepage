@@ -1,7 +1,7 @@
     <header class="navbar">
-        <div class="name">
+        <a href="index.php" class="name">
             <span>S</span><span>i</span><span>m</span><span>w</span><span>o</span><span>n</span>
-        </div>
+        </a>
         <div class="left_menu">
             <div id="button" class="icon">
                 <div class="icon_bg" onclick="myBtn()">

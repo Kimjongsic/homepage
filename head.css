@@ -1,4 +1,8 @@
+a {
+    text-decoration: none;
+}
 .name {
+    display: block;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     font-size: 32px;
