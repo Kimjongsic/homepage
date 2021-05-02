@@ -9,12 +9,18 @@ include "password.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="read.css">
+	<link rel="stylesheet" href="head.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c2538add9.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
+<?php if(empty($_SESSION['userId'])) {
+    include "indexHD.php";
+}else {
+    include "homeHD.php";
+}?>
 <?php
 		$bno = $_GET['num']; /* bno함수에 idx값을 받아와 넣음*/
 		$hit = mysqli_fetch_array(mq("select * from mathboard where num ='".$bno."'"));
