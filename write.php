@@ -16,7 +16,10 @@
 </head>
 <body>
 <?php if (empty($_SESSION['userId'])) {?>
-        <script>history.back();</script>
+        <script>
+        alert('로그인 후 이용바랍니다.');
+        history.back();
+        </script>
 <?php } else {?>
             <h1>수학 게시판</h1>
                 <form action="writeOk.php" method="post">
