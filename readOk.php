@@ -4,7 +4,9 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 $bno = $_GET['num'];
 $sql = mq("select * from mathboard where num='$bno';");
 $board = $sql->fetch_array();
-
+echo $board['lock_post'];
+echo $_SESSION['userName'];
+echo $board['name']; 
 if ($board['lock_post'] == "1") {
     if ($_SESSION['userName']==$board['name']) {?>
         <script>location.href="read.php?num=<?php echo $board['num'];?>"</script>
@@ -16,6 +18,6 @@ if ($board['lock_post'] == "1") {
         </script>
     <?php }
 }
-else{ ?>
+else {?>
     <script>location.href="read.php?num=<?php echo $board['num'];?>"</script>
 <?php }?>
