@@ -15,7 +15,7 @@ if(empty($_POST['pw'])){
 	$lo_post = '1';
 }
 
-$mqq = mq("alter table mathboard auto_increment=0"); //auto_increment 값 초기화
+$mqq = mq("alter table mathboard auto_increment=1"); //auto_increment 값 초기화
 
 if($username && $title && $content){
     $sql = mq("insert into mathboard(name,pw,title,content,date,lock_post) values('".$username."','".$userpw."','".$title."','".$content."','".$date."','".$lo_post."')"); 
