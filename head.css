@@ -1,6 +1,37 @@
+.name {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.name span:nth-child(1) {
+    color: rgb(66, 133, 244);
+}
+.name span:nth-child(2) {
+    color: rgb(234, 67, 53);
+}
+.name span:nth-child(3) {
+    color: rgb(251, 188, 5);
+}
+.name span:nth-child(4) {
+    color: rgb(66, 133, 244);
+}
+.name span:nth-child(5) {
+    color: rgb(52, 168, 83);
+}
+.name span:nth-child(6) {
+    color: rgb(234, 67, 53);
+}
+.left_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 16px 8px;
 }
