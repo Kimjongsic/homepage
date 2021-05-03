@@ -29,8 +29,7 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
         <?php
             // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
           $sql2 = mq("select * from mathboard order by num desc limit 0,5");
-          if($mathboard = $sql->fetch_array())
-          {
+          $mathboard = $sql->fetch_array();
             //title변수에 DB에서 가져온 title을 선택
             $title=$mathboard["title"]; 
             if(strlen($title)>30)
@@ -47,7 +46,6 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
                 <td width="100"><?php echo $mathboard['hit']; ?></td>
             </tr>
         </tbody>
-        <?php } ?>
     </table>
     <div id="write_btn">
         <a href="write.php"><button>글쓰기</button></a>
