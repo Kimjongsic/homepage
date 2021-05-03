@@ -29,7 +29,7 @@ session_start();
     </table>
     <?php
             // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
-          $sql2 = mq("select * from mathboard order by num desc limit 0,5");
+          $sql = mq("select * from mathboard order by num desc limit 0,5");
           $mathboard = $sql->fetch_array();
           echo $mathboard
     ?>
