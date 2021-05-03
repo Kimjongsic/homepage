@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c2538add9.js" crossorigin="anonymous"></script>
-    <script src="head.js"></script>
     <title>Document</title>
 </head>
 <body>
