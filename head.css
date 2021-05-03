@@ -222,6 +222,7 @@ a {
     .user_bg {
         width: 28px;
         height: 28px;
+        margin: 6px;
     }
     .user {
         font-size: 12px;

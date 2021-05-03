@@ -363,4 +363,23 @@ body {
         padding: 2px 8px;
         width: 82px;
     }
+    .logoutBtn {
+        font-size: 12px;
+        padding: 6px 21px;
+        height: 28px;
+    }
+    .user_bg {
+        width: 28px;
+        height: 28px;
+        margin: 6px;
+    }
+    .user {
+        font-size: 12px;
+        width: 28px;
+        height: 28px;
+    }
+    .user_bg:hover {
+        width: 32px;
+        height: 32px;
+    }
 }
