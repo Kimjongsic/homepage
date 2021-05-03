@@ -1,39 +1,49 @@
 body {
     font-family: 'Josefin Sans', 'Nanum Gothic', sans-serif;
+    margin: 0;
 }
 a {
     text-decoration: none;
 }
 h1 {
-    margin-bottom: 48px;
-    padding-bottom: 8px;
+    width: 970.4px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding: 8px 0;
     border-bottom: 3px solid rgb(211, 211, 211);
     color: #5f6368;
     font-weight: normal;
 }
+.board-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .list-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-collapse: collapse;
     padding: 8px 0;
     margin: 8px 0;
 }
 .list-table th {
     padding: 12px 8px;
-    border: 2px solid rgb(66, 133, 244);
     font-weight: bold;
     color: white;
     background-color: rgb(66, 133, 244);
 }
 .list-table td {
     padding: 12px 8px;
-    border-top: 1px solid white;
     border-bottom: 1px solid rgb(211, 211, 211);
 }
-.list-table tr:hover {
-    border: 2px solid rgb(66, 133, 244);
+.list-table tbody tr:hover {
+    color: rgb(66, 133, 244);
+    font-weight: bold;
 }
 .list-table td.list-num {
-    border-left: 1px solid white;
     text-align: center;
 }
 .list-table td.list-title {
@@ -47,7 +57,6 @@ h1 {
     text-align: center;
 }
 .list-table td.list-hit {
-    border-right: 1px solid white;;
     text-align: center;
 }
 

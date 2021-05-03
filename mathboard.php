@@ -22,7 +22,9 @@ session_start();
 } else {
     include "homeHD.php";
 }?>
-    <h1>MATH BOARD</h1>
+    <div class="board-title">
+        <h1>MATH BOARD</h1>
+    </div>
     <table class="list-table">
         <thead>
             <th class="list-num" width="70">번호</th>
