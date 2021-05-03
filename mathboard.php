@@ -26,9 +26,6 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
             <th width="100">작성일</th>
             <th width="100">조회수</th>
         </thead>
-    <div id="write_btn">
-        <a href="write.php"><button>글쓰기</button></a>
-    </div>
         <?php
             // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
           $sql2 = mq("select * from mathboard order by num desc limit 0,5");
@@ -40,9 +37,7 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
             { 
               //title이 30을 넘어서면 ...표시
               $title=str_replace($mathboard["title"],iconv_substr($mathboard["title"],0,30,"utf-8")."...",$mathboard["title"]);
-            }
-          
-        ?>
+            }?>
         <tbody>
             <tr>
                 <td width="70"><?php echo $mathboard['num']; ?></td>
@@ -54,5 +49,8 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
         </tbody>
         <?php } ?>
     </table>
+    <div id="write_btn">
+        <a href="write.php"><button>글쓰기</button></a>
+    </div>
 </body>
 </html>
