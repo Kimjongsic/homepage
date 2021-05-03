@@ -22,19 +22,19 @@ session_start();
 } else {
     include "homeHD.php";
 }?>
-    <h1>수학 게시판</h1>
+    <h1>MATH BOARD</h1>
     <table class="list-table">
         <thead>
-            <th width="70">번호</th>
-            <th width="500">제목</th>
-            <th width="120">글쓴이</th>
-            <th width="100">작성일</th>
-            <th width="100">조회수</th>
+            <th class="list-num" width="70">번호</th>
+            <th class="list-title" width="500">제목</th>
+            <th class="list-name" width="120">글쓴이</th>
+            <th class="list-date" width="100">작성일</th>
+            <th class="list-hit" width="100">조회수</th>
         </thead>
     </table>
     <?php
             // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
-          $sql = mq("select * from mathboard order by num desc limit 0,5");
+          $sql = mq("select * from mathboard order by num desc limit 0,10");
           $mathboard = $sql->fetch_array();
           //title변수에 DB에서 가져온 title을 선택
           $title=$mathboard['title']; 
@@ -46,15 +46,20 @@ session_start();
     ?>
         <tbody>
             <tr>
-                <td width="70"><?php echo $mathboard['num']; ?></td>
-                <td width="500"><a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title; ?></a></td>
-                <td width="120"><?php echo $mathboard['name']; ?></td>
-                <td width="100"><?php echo $mathboard['date']; ?></td>
-                <td width="100"><?php echo $mathboard['hit']; ?></td>
+                <td class="list-num" width="70"><?php echo $mathboard['num']; ?></td>
+                <td class="list-title" width="500"><?php
+                if($mathboard['lock_post']=="1") {?>
+                <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title ?> <i class="fas fa-lock"></i>; 
+                <?php } else {?>
+                <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title; }?>
+                </a></td>
+                <td class="list-name" width="120"><?php echo $mathboard['name']; ?></td>
+                <td class="list-date" width="100"><?php echo $mathboard['date']; ?></td>
+                <td class="list-hit" width="100"><?php echo $mathboard['hit']; ?></td>
             </tr>
         </tbody>
-    <div id="write_btn">
-        <a href="write.php"><button>글쓰기</button></a>
+    <div id="btn_wrap">
+        <a class="write_btn" href="write.php">글쓰기</a>
     </div>
 </body>
 </html>
