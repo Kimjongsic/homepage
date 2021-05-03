@@ -42,7 +42,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("로그인에 성공하였습니다.")
-        location.href = "home.php";
+        location.href = "index.php";
     </script>
 <?php
 } else {

@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c2538add9.js" crossorigin="anonymous"></script>
+    <script src="head.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
         alert('로그인 후 이용바랍니다.');
         history.back();
         </script>
-<?php } else {?>
+<?php } else { include "homeHD.php"; ?>
             <h1>수학 게시판</h1>
                 <form action="writeOk.php" method="post">
                     <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>

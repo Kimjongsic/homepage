@@ -10,7 +10,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mathboard.css">
     <link rel="stylesheet" href="head.css">
-    <!-- <link rel="stylesheet" href="head.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c2538add9.js" crossorigin="anonymous"></script>
@@ -37,7 +36,13 @@ session_start();
             // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
           $sql = mq("select * from mathboard order by num desc limit 0,5");
           $mathboard = $sql->fetch_array();
-          echo $mathboard
+          //title변수에 DB에서 가져온 title을 선택
+          $title=$mathboard['title']; 
+          if(strlen($title)>30)
+          { 
+            //title이 30을 넘어서면 ...표시
+            $title=str_replace($mathboard['title'],iconv_substr($mathboard['title'],0,30,"utf-8")."...",$mathboard['title']);
+          }
     ?>
         <tbody>
             <tr>

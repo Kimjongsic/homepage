@@ -22,12 +22,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php if(empty($_SESSION['userId'])) {
-    include "indexHD.php";
-}else {
-    include "homeHD.php";
-}?>
-<?php if ($_SESSION['userName']==$board['name']) {?>
+<?php if ($_SESSION['userName']==$board['name']) { include "homeHD.php"; ?>
 <div id="board_write">
         <h1><a href="mathboard.php">수학 게시판</a></h1>
         <h4>글을 수정합니다.</h4>

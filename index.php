@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,18 @@
                 </a>
             </div>
         </div>
+        <?php if(empty($_SESSION['userId'])) {?>
         <a href="login.php" class="loginBtn">로그인</a>
+        <?php } else {?>
+        <div class="user_bg">
+            <div class="user">
+        <?php
+            echo $_SESSION['first'];
+        ?>
+            </div>  
+        </div>
+        <a href="logout.php" class="logoutBtn">로그아웃</a>
+        <?php }?>
         <!-- <a href="mysqltest.php">DB 연결 확인</a> -->
         <!-- <a href="phpinfo.php">php정보확인</a> -->
     </header>
