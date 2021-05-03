@@ -29,5 +29,6 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
     <div id="write_btn">
         <a href="write.php"><button>글쓰기</button></a>
     </div>
+    <?php echo $_SESSION['userId']; ?>
 </body>
 </html>
