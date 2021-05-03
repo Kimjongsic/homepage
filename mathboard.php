@@ -16,11 +16,7 @@ include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
     <title>Document</title>
 </head>
 <body>
-<?php if(empty($_SESSION['userId'])) {
-    include "indexHD.php";
-}else {
-    include "homeHD.php";
-}?>
+
     <h1>수학 게시판</h1>
     <table class="list-table">
         <thead>
