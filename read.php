@@ -1,6 +1,7 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
 include "password.php";
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
