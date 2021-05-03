@@ -17,11 +17,6 @@
     <title>Document</title>
 </head>
 <body>
-<?php if(empty($_SESSION['userId'])) {
-    include "indexHD.php";
-}else {
-    include "homeHD.php";
-}?>
 <?php if (empty($_SESSION['userId'])) {?>
         <script>
         alert('로그인 후 이용바랍니다.');
