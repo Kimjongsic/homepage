@@ -1,5 +1,6 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+	session_start();
 	
 	$bno = $_GET['num'];
 	$sql1 = mq("select * from mathboard where num='$bno';");
