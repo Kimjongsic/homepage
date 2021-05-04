@@ -33,7 +33,6 @@ session_start();
             <th class="list-date" width="100">작성일</th>
             <th class="list-hit" width="100">조회수</th>
         </thead>
-    </table>
     <?php
             // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
           $sql = mq("select * from mathboard order by num desc limit 0,10");
@@ -60,6 +59,7 @@ session_start();
                 <td class="list-hit" width="100"><?php echo $mathboard['hit']; ?></td>
             </tr>
         </tbody>
+    </table>
     <div id="btn_wrap">
         <a class="write_btn" href="write.php">글쓰기</a>
     </div>
