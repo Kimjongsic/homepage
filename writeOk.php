@@ -10,10 +10,10 @@ $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 $title = $_POST['title'];
 $content = $_POST['content'];
 $date = date('Y-m-d');
-if(empty($_POST['pw'])){
-	$lo_post = '0';
-}else{
+if(isset($_POST['lockpost'])){
 	$lo_post = '1';
+}else{
+	$lo_post = '0';
 }
 
 if($username && $title && $content){

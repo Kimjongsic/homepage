@@ -24,13 +24,33 @@
         history.back();
         </script>
 <?php } else { include "homeHD.php"; ?>
-            <h1>수학 게시판</h1>
-                <form action="writeOk.php" method="post">
-                    <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
-                    <textarea name="content" id="ucontent" placeholder="내용" required></textarea>
-                    <input type="password" name="pw" id="upw" value="" placeholder="비밀번호"/>
-                    <button type="submit">글 작성</button>
-                </form>
+    <div class="board-title">
+        <h1>MATH BOARD</h1>
+    </div>
+    <form action="writeOk.php" method="post">
+        <div class="write_wrap">
+            <div class="write_tit">
+                <span>제목</span>
+                <div class="write_bar">
+                <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
+                </div>
+            </div>
+            <div class="secret_wrap">
+                <span>비밀글</span>
+                <div class="checkbox_wrap">
+                    <input style="zoom: 1.2;" type="checkbox" value="1" id="secbtn" name="lockpost" class="secret_btn">
+                </div>
+            </div>
+            <div class="write_con">
+                <div class="write_bar">
+                    <textarea name="content" id="ucontent" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="submit_btn">
+            <input type="submit" value="확인" class="write_btn"></input>
+        </div>
+    </form>
   <?php }?>
 </body>
 </html>
