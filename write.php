@@ -32,7 +32,7 @@
             <div class="write_tit">
                 <span>제목</span>
                 <div class="write_bar">
-                <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
+                <textarea name="title" id="utitle" rows="1" cols="55" maxlength="100" required></textarea>
                 </div>
             </div>
             <div class="secret_wrap">

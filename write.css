@@ -41,7 +41,7 @@ textarea:focus {
 }
 .write_tit span {
     width: 80px;
-    font-size: 20px;
+    font-size: 16px;
 }
 .write_bar {
     display: flex;
@@ -63,9 +63,6 @@ textarea:focus {
     font-size: 16px;
     padding: 0 8px;
 }
-#utitle:focus::placeholder {
-    color: transparent;
-}
 .secret_wrap {
     display: flex;
     justify-content: flex-start;
@@ -74,7 +71,7 @@ textarea:focus {
 }
 .secret_wrap span {
     width: 80px;
-    font-size: 16px;
+    font-size: 14px;
 }
 .checkbox_wrap {
     display: flex;
