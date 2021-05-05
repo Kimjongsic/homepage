@@ -120,3 +120,52 @@ h2 {
     font-weight: bold;
     padding: 9px 23px;
 }
+
+@media screen and (max-width: 505px) {
+    h1 {
+        width: 100%;
+        font-size: 24px;
+        padding-left: 16px;
+    }
+    .post_title {
+        width: 100%;
+        padding-left: 16px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .info_wrap {
+        width: 100%;
+        padding-left: 16px;
+        padding-bottom: 12px;
+    }
+    .post_info span {
+        font-size: 12px;
+    }
+    .content_wrap {
+        width: 100%;
+    }
+    .post_content {
+        padding-left: 16px;
+        font-size: 16px;
+    }
+    .bar_wrap {
+        width: 100%;
+    }
+    .post_bar {
+        margin: 8px 0;
+    }
+    .post_bar li a {
+        font-size: 14px;
+    }
+    .delete_wrap {
+        padding-right: 16px;
+    }
+    .listbtn_wrap {
+        width: 100%;
+    }
+    .list_btn {
+        font-size: 14px;
+        padding: 6px 19px;
+    }
+}

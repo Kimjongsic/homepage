@@ -50,8 +50,8 @@ session_start();
                 <td class="list-num" width="70">#</td>
                 <td class="list-title" width="500"><?php
                 if($mathboard['lock_post']=="1") {?>
-                <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title ?> <i class="fas fa-lock"></i>; 
-                <?php } else {?>
+                <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title ?> <i class="fas fa-lock"></i> 
+                <?php ;} else {?>
                 <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title; }?>
                 </a></td>
                 <td class="list-name" width="120"><?php echo $mathboard['name']; ?></td>
