@@ -47,7 +47,7 @@ session_start();
     ?>
         <tbody>
             <tr>
-                <td class="list-num" width="70"><?php echo $mathboard['num']; ?></td>
+                <td class="list-num" width="70">#</td>
                 <td class="list-title" width="500"><?php
                 if($mathboard['lock_post']=="1") {?>
                 <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title ?> <i class="fas fa-lock"></i>; 

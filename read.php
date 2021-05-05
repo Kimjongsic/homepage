@@ -32,23 +32,44 @@ session_start();
 		$board = $sql->fetch_array();
 	?>
 <!-- 글 불러오기 -->
-<div id="board_read">
-	<h2><?php echo $board['title']; ?></h2>
-		<div id="user_info">
-			<?php echo $board['name']; ?> <?php echo $board['date']; ?> 조회:<?php echo $board['hit']; ?>
-				<div id="bo_line"></div>
-			</div>
-			<div id="bo_content">
-				<?php echo nl2br("$board[content]"); ?>
-			</div>
-	<!-- 목록, 수정, 삭제 -->
-	<div id="bo_ser">
-		<ul>
-			<li><a href="mathboard.php">[목록으로]</a></li>
-			<li><a href="modify.php?num=<?php echo $board['num']; ?>">[수정]</a></li>
-			<li><a href="delete.php?num=<?php echo $board['num']; ?>">[삭제]</a></li>
-		</ul>
+	<div class="board-title">
+        <h1>MATH BOARD</h1>
+    </div>
+	<div class="post_title">
+		<h2><?php echo $board['title']; ?></h2>
 	</div>
-</div>
+	<div class="info_wrap">
+		<ul class="post_info">
+            <li>
+                <span class="post_info_tit">글쓴이</span>
+                <span class="post_info_text"><?php echo $board['name']; ?></span>
+            </li>
+            <li>
+                <span class="post_info_tit">작성일</span>
+                <span class="post_info_text"><?php echo $board['date']; ?></span>
+            </li>
+            <li>
+                <span class="post_info_tit">조회수</span>
+                <span class="post_info_text"><?php echo $board['hit']; ?></span>
+            </li>
+        </ul>
+	</div>
+	<div class="content_wrap">
+        <div class="post_content">
+            <?php echo nl2br("$board[content]"); ?>
+        </div>
+    </div>
+	<!-- 목록, 수정, 삭제 -->
+	<div class="bar_wrap">
+        <ul class="post_bar">
+            <li class="delete_wrap"><a href="delete.php?num=<?php echo $board['num']; ?>">삭제</a></li>
+            <li class="modify_wrap"><a href="modify.php?num=<?php echo $board['num']; ?>">수정</a></li>
+        </ul>
+    </div>
+    <div class="listbtn_wrap">
+        <div class="list_wrap">
+            <a class="list_btn" href="mathboard.php">목록</a>
+        </div>
+    </div>
 </body>
 </html>
