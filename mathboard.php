@@ -34,17 +34,15 @@ session_start();
             <th class="list-hit" width="100">조회수</th>
         </thead>
     <?php
-            // board테이블에서 idx를 기준으로 내림차순해서 5개까지 표시
+            // mathboard에서 상위 10개
           $sql = mq("select * from mathboard order by num desc limit 0,10");
-          $mathboard = $sql->fetch_array();
+          while($mathboard = $sql->fetch_array()) {
           //title변수에 DB에서 가져온 title을 선택
           $title=$mathboard['title']; 
           if(strlen($title)>30)
-          { 
-            //title이 30을 넘어서면 ...표시
+          { //title이 30을 넘어서면 ...표시
             $title=str_replace($mathboard['title'],iconv_substr($mathboard['title'],0,30,"utf-8")."...",$mathboard['title']);
-          }
-    ?>
+          }?>
         <tbody>
             <tr>
                 <td class="list-num" width="70">#</td>
@@ -59,6 +57,7 @@ session_start();
                 <td class="list-hit" width="100"><?php echo $mathboard['hit']; ?></td>
             </tr>
         </tbody>
+        <?php }?>
     </table>
     <div class="btn_div">
         <div id="btn_wrap">
