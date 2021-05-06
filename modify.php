@@ -37,7 +37,9 @@
             <div class="secret_wrap">
                 <span>비밀글</span>
                 <div class="checkbox_wrap">
-                    <input style="zoom: 1.2;" type="checkbox" value="1" id="secbtn" name="lockpost" class="secret_btn">
+                    <input style="zoom: 1.2;" type="checkbox" value="1" id="secbtn" name="lockpost" class="secret_btn"
+                    <?php if($board['lock_post']=="1") {?> checked <?php }?>
+                    >
                 </div>
             </div>
             <div class="write_con">
