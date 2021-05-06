@@ -113,3 +113,57 @@ textarea:focus {
     font-size: 16px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 505px) {
+    h1 {
+        width: 100%;
+        font-size: 24px;
+        padding-left: 16px;
+    }
+    .post_title {
+        width: 100%;
+        padding-left: 16px;
+    }
+    .write_wrap {
+        width: 100%;
+    }
+    .write_tit span {
+        width: 15%;
+        padding-left: 16px;
+        font-size: 14px;
+    }
+    .write_bar {
+        width: 75%;
+        margin-right: 16px;
+    }
+    #utitle {
+        width: 100%;
+    }
+    .secret_wrap {
+        width: 100%;
+    }
+    .secret_wrap span {
+        width: 15%;
+        padding-left: 16px;
+        font-size: 12px;
+    }
+    .secret_btn {
+        zoom: 1;
+    }
+    .write_con {
+        width: 90%;
+        padding: 0 16px;
+    }
+    .write_con div {
+        width: 100%;
+    }
+    #ucontent {
+        width: 100%;
+    }
+    .submit_btn {
+        margin-top: 8px;
+    }
+    .write_btn {
+        font-size: 12px;
+    }
+}
