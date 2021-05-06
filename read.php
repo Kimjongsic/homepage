@@ -36,7 +36,10 @@ session_start();
         <h1>MATH BOARD</h1>
     </div>
 	<div class="post_title">
-		<h2><?php echo $board['title']; ?></h2>
+		<h2>
+            <?php echo $board['title']; 
+            if($board['lock_post']=="1") {?> <i class="fas fa-lock"></i> <?php }?>
+        </h2>
 	</div>
 	<div class="info_wrap">
 		<ul class="post_info">
