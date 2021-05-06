@@ -12,7 +12,7 @@ if(isset($_POST['lockpost'])){
 }
 echo $_POST['lockpost']
 echo $lo_post
-$sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'"); ?>
+// $sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'"); ?>
 
-<script type="text/javascript">alert("수정되었습니다."); </script>
+<!-- <script type="text/javascript">alert("수정되었습니다."); </script> -->
 <!-- <meta http-equiv="refresh" content="0 url=/read.php?idx=<?php echo $bno; ?>"> -->
