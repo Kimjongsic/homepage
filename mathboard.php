@@ -60,8 +60,10 @@ session_start();
             </tr>
         </tbody>
     </table>
-    <div id="btn_wrap">
-        <a class="write_btn" href="write.php">글쓰기</a>
+    <div class="btn_div">
+        <div id="btn_wrap">
+            <a class="write_btn" href="write.php">글쓰기</a>
+        </div>
     </div>
 </body>
 </html>
