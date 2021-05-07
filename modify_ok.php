@@ -5,8 +5,7 @@ $bno = $_GET['num'];
 $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 $title = $_POST['title'];
 $content = $_POST['content'];
-echo $_POST['lockpost'];
-if(isset($_POST['lockpost'])){
+if($_POST['lockpost']=="1"){
 	$lo_post = '1';
 }else{
 	$lo_post = '0';
@@ -14,4 +13,4 @@ if(isset($_POST['lockpost'])){
 $sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'"); ?>
 
 <script type="text/javascript">alert("수정되었습니다."); </script>
-<!-- <meta http-equiv="refresh" content="0 url=/read.php?num=<?php echo $bno; ?>"> -->
+<meta http-equiv="refresh" content="0 url=/read.php?num=<?php echo $bno; ?>">
