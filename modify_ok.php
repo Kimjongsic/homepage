@@ -2,7 +2,6 @@
 include "mathboardSave.php";
 
 $bno = $_GET['num'];
-$userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
 $title = $_POST['title'];
 $content = $_POST['content'];
 if($_POST['lockpost']=="1"){
@@ -10,9 +9,9 @@ if($_POST['lockpost']=="1"){
 }else{
 	$lo_post = '0';
 }
-$sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'");
+$sql = mq("update mathboard set title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'");
 $sql2 = mq("select * from mathboard where num='".$bno."'");
-$board = $sql->fetch_array();
+$board = $sql2->fetch_array();
 echo $board;
 ?>
 
