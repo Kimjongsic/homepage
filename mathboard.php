@@ -115,6 +115,7 @@ session_start();
         ?>
       </ul>
     </div>
+    <?php mysqli_close($conn); ?>
     <div class="btn_div">
         <div id="btn_wrap">
             <a class="write_btn" href="write.php">글쓰기</a>
