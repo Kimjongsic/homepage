@@ -10,7 +10,10 @@ if($_POST['lockpost']=="1"){
 }else{
 	$lo_post = '0';
 }
-$sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'"); ?>
+$sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'"); 
+echo $sql;
+?>
+
 
 <script type="text/javascript">alert("수정되었습니다."); </script>
-<meta http-equiv="refresh" content="0 url=/read.php?num=<?php echo $bno; ?>">
+<!-- <meta http-equiv="refresh" content="0 url=/read.php?num=<?php echo $bno; ?>"> -->
