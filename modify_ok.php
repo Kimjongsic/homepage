@@ -10,8 +10,10 @@ if($_POST['lockpost']=="1"){
 }else{
 	$lo_post = '0';
 }
-$sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'"); 
-echo $sql;
+$sql = mq("update mathboard set pw='".$userpw."',title='".$title."',content='".$content."',lock_post='".$lo_post."' where num='".$bno."'");
+$sql2 = mq("select * from mathboard where num='".$bno."'");
+$board = $sql->fetch_array();
+echo $board;
 ?>
 
 
