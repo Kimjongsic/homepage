@@ -1,5 +1,5 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+include "mathboardSave.php";
 session_start();
 ?>
 <!DOCTYPE html>

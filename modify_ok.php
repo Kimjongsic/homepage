@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+include "mathboardSave.php";
 
 $bno = $_GET['num'];
 $userpw = password_hash($_POST['pw'], PASSWORD_DEFAULT);

@@ -1,5 +1,5 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+include "mathboardSave.php";
 include "password.php";
 session_start();
 ?>

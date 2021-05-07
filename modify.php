@@ -1,6 +1,6 @@
 <!--- 게시글 수정 -->
 <?php
-	include $_SERVER['DOCUMENT_ROOT']."/mathboardSave.php";
+	include "mathboardSave.php";
     session_start();
    
 	$bno = $_GET['num'];

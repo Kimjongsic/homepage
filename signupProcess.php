@@ -14,7 +14,7 @@ echo $hashedPassword;
 $sql = "INSERT INTO members(id, pw, name, birthday, gender) VALUES('{$_POST['user_id']}', '{$hashedPassword}', '{$_POST['user_name']}', '{$_POST['user_year']}', '{$_POST['user_gender']}')";
 echo $sql;
 $result = mysqli_query($conn, $sql);
-echo $result;
+
 
 if ($result === false) {
     echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
