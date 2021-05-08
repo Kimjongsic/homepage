@@ -85,7 +85,7 @@
                         <span>Eng Field</span>
                     </div>
                 </a>
-                <a href="" class="tile">
+                <a href="sciboard/sciboard.php" class="tile">
                     <i class="fas fa-flask" style="color: rgb(251, 188, 5);"></i>
                     <div class="tile_name">
                         <span>Sci Field</span>
