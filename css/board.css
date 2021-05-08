@@ -103,10 +103,6 @@ h1 {
 	margin-left: 10px; 
 	text-align: center;
 }
-.fo_re {
-	font-weight: bold;
-	color:red;
-}
 
 @media screen and (max-width: 505px) {
     h1 {

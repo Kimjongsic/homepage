@@ -1,5 +1,5 @@
 <?php 
-include "mathboardSave.php";
+include "engboardSave.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -15,6 +15,20 @@ session_start();
     <script src="https://kit.fontawesome.com/1c2538add9.js" crossorigin="anonymous"></script>
     <script src="head.js"></script>
     <title>Document</title>
+    <style type="text/css">
+        .list-table th {
+            background-color: rgb(234, 67, 53);
+        }
+        .list-table tbody tr:hover {
+            color: rgb(234, 67, 53);
+        }
+        .write_btn {
+            background-color: rgb(234, 67, 53);
+        }
+        .write_btn:hover {
+            box-shadow: 0px 2px 10px 0px rgba(234,67,53,0.6);
+        }
+    </style>
 </head>
 <body>
 <?php if(empty($_SESSION['userId'])) {
@@ -23,7 +37,7 @@ session_start();
     include "../homeHD.php";
 }?>
     <div class="board-title">
-        <h1>MATH BOARD</h1>
+        <h1>ENGLISH BOARD</h1>
     </div>
     <table class="list-table">
         <thead>
@@ -35,26 +49,26 @@ session_start();
         </thead>
         <?php
             // mathboard에서 상위 10개
-          $sql2 = mq("select * from mathboard order by num desc limit 0, 10");
-          while($mathboard = $sql2->fetch_array()) {
+          $sql2 = mq("select * from engboard order by num desc limit 0, 10");
+          while($engboard = $sql2->fetch_array()) {
           //title변수에 DB에서 가져온 title을 선택
-          $title=$mathboard['title']; 
+          $title=$engboard['title']; 
           if(strlen($title)>30)
           { //title이 30을 넘어서면 ...표시
-            $title=str_replace($mathboard['title'],iconv_substr($mathboard['title'],0,30,"utf-8")."...",$mathboard['title']);
+            $title=str_replace($engboard['title'],iconv_substr($engboard['title'],0,30,"utf-8")."...",$engboard['title']);
           }?>
         <tbody>
             <tr>
-                <td class="list-num" width="70"><?php echo $mathboard['num']; ?></td>
+                <td class="list-num" width="70"><?php echo $engboard['num']; ?></td>
                 <td class="list-title" width="500"><?php
-                if($mathboard['lock_post']=="1") {?>
-                <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title ?> <i class="fas fa-lock"></i> 
+                if($engboard['lock_post']=="1") {?>
+                <a href="readOk.php?num=<?php echo $engboard['num'];?>"><?php echo $title ?> <i class="fas fa-lock"></i> 
                 <?php ;} else {?>
-                <a href="readOk.php?num=<?php echo $mathboard['num'];?>"><?php echo $title; }?>
+                <a href="readOk.php?num=<?php echo $engboard['num'];?>"><?php echo $title; }?>
                 </a></td>
-                <td class="list-name" width="120"><?php echo $mathboard['name']; ?></td>
-                <td class="list-date" width="100"><?php echo $mathboard['date']; ?></td>
-                <td class="list-hit" width="100"><?php echo $mathboard['hit']; ?></td>
+                <td class="list-name" width="120"><?php echo $engboard['name']; ?></td>
+                <td class="list-date" width="100"><?php echo $engboard['date']; ?></td>
+                <td class="list-hit" width="100"><?php echo $engboard['hit']; ?></td>
             </tr>
         </tbody>
         <?php }?>
