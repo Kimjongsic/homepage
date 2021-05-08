@@ -35,6 +35,6 @@
                     </a>
                 </div>
             </div>
-            <a href="login.php" class="loginBtn">로그인</a>
+            <a href="/login.php" class="loginBtn">로그인</a>
         </div>
     </header>

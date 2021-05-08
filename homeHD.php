@@ -44,6 +44,6 @@
             ?>
                 </div>  
             </div>
-            <a href="logout.php" class="logoutBtn">로그아웃</a>
+            <a href="/logout.php" class="logoutBtn">로그아웃</a>
         </div>
     </header>
