@@ -71,7 +71,7 @@ session_start();
     </section>
     <section class="container">
         <div id="cont" class="container_menu">
-                <a href="mathboard.php" class="tile">
+                <a href="mathboard/mathboard.php" class="tile">
                     <i class="fas fa-square-root-alt" style="color: rgb(66, 133, 244);"></i>
                     <div class="tile_name">
                         <span>Math Field</span>
