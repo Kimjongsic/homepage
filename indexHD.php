@@ -1,5 +1,5 @@
     <header class="navbar">
-        <a href="index.php" class="name">
+        <a href="/index.php" class="name">
             <span>S</span><span>i</span><span>m</span><span>w</span><span>o</span><span>n</span>
         </a>
         <div class="left_menu">
