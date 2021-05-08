@@ -23,7 +23,7 @@
         alert('로그인 후 이용바랍니다.');
         history.back();
         </script>
-<?php } else { include "/homeHD.php"; ?>
+<?php } else { include "../homeHD.php"; ?>
     <div class="board-title">
         <h1>MATH BOARD</h1>
     </div>

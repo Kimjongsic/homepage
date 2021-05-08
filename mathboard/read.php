@@ -1,6 +1,6 @@
 <?php 
 include "mathboardSave.php";
-include "password.php";
+include "../password.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -19,9 +19,9 @@ session_start();
 </head>
 <body>
 <?php if(empty($_SESSION['userId'])) {
-    include "/indexHD.php";
+    include "../indexHD.php";
 }else {
-    include "/homeHD.php";
+    include "../homeHD.php";
 }?>
 <?php
 		$bno = $_GET['num']; /* bno함수에 idx값을 받아와 넣음*/

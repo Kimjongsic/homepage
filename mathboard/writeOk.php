@@ -1,7 +1,7 @@
 <?php
 
 include "mathboardSave.php";
-include "password.php";
+include "../password.php";
 session_start();
 
 //각 변수에 write.php에서 input name값들을 저장한다

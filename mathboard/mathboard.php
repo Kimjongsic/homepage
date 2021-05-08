@@ -18,9 +18,9 @@ session_start();
 </head>
 <body>
 <?php if(empty($_SESSION['userId'])) {
-    include "/indexHD.php";
+    include "../indexHD.php";
 } else {
-    include "/homeHD.php";
+    include "../homeHD.php";
 }?>
     <div class="board-title">
         <h1>MATH BOARD</h1>
