@@ -27,7 +27,7 @@
     <div class="board-title">
         <h1>MATH BOARD</h1>
     </div>
-    <form action="writeOk.php" method="post">
+    <form enctype="multipart/form-data" action="writeOk.php" method="post">
         <div class="write_wrap">
             <div class="write_tit">
                 <span>제목</span>
