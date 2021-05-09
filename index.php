@@ -66,7 +66,7 @@
     <section class="search">
         <div class="search_bar">
             <i class="fas fa-search"></i>
-            <form action="https://www.google.com/search" method="GET">
+            <form action="https://www.google.com/search" method="GET" target="_blank">
                 <input name="q" type="text" class="google_search" placeholder="Google 검색">
             </form>
         </div>
@@ -91,7 +91,7 @@
                         <span>Sci Field</span>
                     </div>
                 </a>
-                <a href="" class="tile">
+                <a href="korboard/korboard.php" class="tile">
                     <div class="tileicon_bg">
                         <img src="\icon\hangul_icon.svg" alt="" class="hangul_icon">
                     </div>

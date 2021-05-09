@@ -14,9 +14,17 @@ if(isset($_POST['lockpost'])){
 }else{
 	$lo_post = '0';
 }
+$filepath = "../upload/";
+$tmpfile =  $_FILES['image']['tmp_name'];
+$o_name = $_FILES['image']['name'];
+$filetype = $_FILES['image']['type'];
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['image']['name']);
+$folder = "../../upload/".$filename;
+move_uploaded_file($tmpfile,$folder);
+echo $filename;
 
 if($username && $title && $content){
-    $sql = mq("insert into mathboard(name,title,content,date,lock_post) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."')"); 
+    $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$o_name."','".$filepath."')"); 
     echo "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='mathboard.php';
