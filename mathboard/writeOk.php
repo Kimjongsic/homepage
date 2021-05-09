@@ -24,7 +24,7 @@ move_uploaded_file($tmpfile,$folder);
 echo $filename;
 
 if($username && $title && $content){
-    $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$o_name."','".$filepath."')"); 
+    $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$filepath."','".$o_name."')"); 
     echo "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='mathboard.php';
