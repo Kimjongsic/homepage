@@ -14,16 +14,15 @@ if(isset($_POST['lockpost'])){
 }else{
 	$lo_post = '0';
 }
-$filepath = "../upload/";
+$filepath = $_SERVER['DOCUMENT_ROOT']."/upload/";
 $tmpfile =  $_FILES['image']['tmp_name'];
 $o_name = $_FILES['image']['name'];
 $filetype = $_FILES['image']['type'];
 $filename = iconv("UTF-8", "EUC-KR",$_FILES['image']['name']);
-$folder = "../../upload/".$filename;
+$folder = $filepath.$filename;
 move_uploaded_file($tmpfile,$folder);
-echo $filename;
-echo $o_name;
-echo $filepath;
+echo $folder;
+print_r($_FILES);
 
 // if($username && $title && $content){
 //     $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$filepath."','".$o_name."')");     
