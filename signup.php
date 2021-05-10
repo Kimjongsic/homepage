@@ -116,7 +116,7 @@
             var userid;
 
             if(self.getAttribute('id') === "userid") {
-                userid = self.val();
+                userid = self.value;
             }
 
             var form = document.createElement('form');
