@@ -115,7 +115,7 @@
             var self = document.getElementById('userid');
             var userid;
 
-            if(self.attr('id') === "userid") {
+            if(self.getAttribute('id') === "userid") {
                 userid = self.val();
             }
 
