@@ -112,7 +112,7 @@
         }
 
         var idcheck = function() {
-            var self = document.getElementByClassName('check');
+            var self = document.getElementById('userid');
             var userid;
 
             if(self.attr('id') === "userid") {
