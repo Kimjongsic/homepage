@@ -7,7 +7,7 @@ $sql = mq("select * from korboard where num='$bno';");
 $board = $sql->fetch_array();
 
 if ($board['lock_post'] == "1") {
-    if ($_SESSION['userName']==$board['name']) {?>
+    if ($_SESSION['userId']==$board['id']) {?>
         <script>location.href="read.php?num=<?php echo $board['num'];?>"</script>
     <?php }
     else {?>

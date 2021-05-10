@@ -5,6 +5,7 @@ include "../password.php";
 session_start();
 
 //각 변수에 write.php에서 input name값들을 저장한다
+$userid = $_SESSION['userId'];
 $username = $_SESSION['userName'];
 $title = $_POST['title'];
 $content = $_POST['content'];
@@ -16,7 +17,7 @@ if(isset($_POST['lockpost'])){
 }
 
 if($username && $title && $content){
-    $sql = mq("insert into engboard(name,title,content,date,lock_post) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."')"); 
+    $sql = mq("insert into engboard(name,title,content,date,lock_post,id) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$userid."')"); 
     echo "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='engboard.php';

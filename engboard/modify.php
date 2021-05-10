@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-<?php if ($_SESSION['userName']==$board['name']) { include "../homeHD.php"; ?>
+<?php if ($_SESSION['userId']==$board['id']) { include "../homeHD.php"; ?>
     <div class="board-title">
         <h1>ENGLISH BOARD</h1>
     </div>

@@ -5,6 +5,7 @@ include "../password.php";
 session_start();
 
 //각 변수에 write.php에서 input name값들을 저장한다
+$userid = $_SESSION['userId'];
 $username = $_SESSION['userName'];
 $title = $_POST['title'];
 $content = $_POST['content'];
@@ -14,16 +15,9 @@ if(isset($_POST['lockpost'])){
 }else{
 	$lo_post = '0';
 }
-$filepath = "/upload";
-$tmpfile =  $_FILES['image']['tmp_name'];
-$o_name = $_FILES['image']['name'];
-$filetype = $_FILES['image']['type'];
-$filename = iconv("UTF-8", "EUC-KR",$_FILES['image']['name']);
-$folder = $filepath.$filename;
-move_uploaded_file($tmpfile,$folder);
 
 if($username && $title && $content){
-    $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$filepath."','".$o_name."')");     
+    $sql = mq("insert into mathboard(name,title,content,date,lock_post,id) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$userid."')");     
     echo "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='mathboard.php';

@@ -5,7 +5,7 @@
 	$bno = $_GET['num'];
 	$sql1 = mq("select * from korboard where num='$bno';");
 	$board = $sql1->fetch_array();
-	if ($_SESSION['userName']==$board['name']) {
+	if ($_SESSION['userId']==$board['id']) {
 	$sql2 = mq("delete from korboard where num='$bno';");
 ?>
 	<script type="text/javascript">alert("삭제되었습니다.");</script>
