@@ -7,6 +7,15 @@ $username = $dbparts['user'];
 $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
 
+$conn = new mysqli($hostname, $username, $password, $database);
+
+$conn->set_charset("utf8");
+
+function mq($sql) {
+    global $conn;
+    return $conn->query($sql);
+}
+
 	if($_POST['userid'] != NULL){
 	$id_check = mq("select * from members where id='{$_POST['userid']}'");
 	$id_check = $id_check->fetch_array();

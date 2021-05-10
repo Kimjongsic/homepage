@@ -16,5 +16,4 @@ function mq($sql) {
     global $conn;
     return $conn->query($sql);
 }
-
 ?>
