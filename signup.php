@@ -21,11 +21,11 @@
                 <form action="signupProcess.php" method="post">
                     <div class="input_bar">
                         <div class="id-pw_bar">
-                            <input type="text" name="user_id" id="userid" class="int check" placeholder="아이디">
+                            <input type="text" name="user_id" id="userid" class="int check" placeholder="아이디" required>
                         </div>
                         <div class="id_check"></div>
                         <div class="id-pw_bar">
-                            <input type="password" name="user_pw" id="pswd1" class="int" placeholder="비밀번호">
+                            <input type="password" name="user_pw" id="pswd1" class="int" placeholder="비밀번호" required>
                             <i id="pswd1View" class="far fa-eye" onclick="pwViewer()"></i>
                         </div>
                         <div class="id-pw_bar">
@@ -37,11 +37,11 @@
                             <span id="pswd2Msg">비밀번호가 일치하지 않습니다.</span>
                         </div>
                         <div class="name_bar">
-                            <input type="text" name="user_name" id="name" class="int" placeholder="이름">
+                            <input type="text" name="user_name" id="name" class="int" placeholder="이름" required>
                         </div>
                         <div class="birth_bar">
                             <div class="year">
-                                <input type="text" name="user_year" id="yy" class="bir_int" placeholder="생년(4자)" maxlength="4">
+                                <input type="text" name="user_year" id="yy" class="bir_int" placeholder="생년(4자)" maxlength="4" required>
                             </div>
                             <div class="month">
                                 <select name="user_month" id="mm" class="bir-sel">
