@@ -65,13 +65,14 @@ h1 {
     font-size: 10px;
 }
 .btn_div {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #btn_wrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 970.4px;
     padding: 8px 16px;
@@ -95,11 +96,14 @@ h1 {
 }
 
 .page_num_wrap {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50.4px;
 }
 .page_num {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
