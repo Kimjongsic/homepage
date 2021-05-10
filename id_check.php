@@ -21,9 +21,19 @@ function mq($sql) {
 	$id_check = $id_check->fetch_array();
 	
 	if($id_check >= 1){
-		echo "존재하는 아이디입니다.";
+		echo "<style type="text/css">
+                .id_check {
+                    color: rgb(234, 67, 53);
+                    font-size: 12px;
+                }
+            </style> 이미 사용중인 아이디입니다.";
 	} else {
-		echo "존재하지 않는 아이디입니다.";
+		echo "<style type="text/css">
+                .id_check {
+                    color: rgb(52, 168, 83);
+                    font-size: 12px;
+                }
+            </style> 사용가능한 아이디입니다.";
 	}
 }
 ?>

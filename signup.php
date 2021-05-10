@@ -124,7 +124,6 @@
 	        		function(data){ 
 	        			if(data){ //만약 data값이 전송되면
 	        				self.parent().parent().find("div.id_check").html(data); //div태그를 찾아 html방식으로 data를 뿌려줍니다.
-	        				self.parent().parent().find("div.id_check").css("color", "rgb(234, 67, 53)"); //div 태그를 찾아 css효과로 빨간색을 설정합니다
 	        			}
 	        		}
 	        	);
