@@ -17,6 +17,9 @@ function mq($sql) {
 
 $userid = $_POST['user_id'];
 $userpw = $_POST['user_pw'];
+$username = $_POST['user_name'];
+$useryear = $_POST['user_year'];
+$usersex = $_POST['user_gender'];
 $userpwcf = $_POST['user_pw_confirm'];
 $hashedPassword = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 echo $hashedPassword;
@@ -29,7 +32,7 @@ echo $hashedPassword;
         echo "<script>alert('비밀번호가 일치하지 않습니다.'); history.back();</script>";
     }
     else{
-        $sql = mq("insert into members(id, pw, name, birthday, gender) values('{$_POST['user_id']}', '{$hashedPassword}', '{$_POST['user_name']}', '{$_POST['user_year']}', '{$_POST['user_gender']}')");
+        $sql = mq("insert into members(id, pw, name, birthday, gender) values('".$userid."', '".$hashedPassword."', '".$username."', '".$useryear."', '".$usersex."')");
         echo $sql;
         $result = mysqli_query($conn, $sql);
         if ($result === false) {
