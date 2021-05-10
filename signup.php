@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1c2538add9.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +21,10 @@
                 <form action="signupProcess.php" method="post">
                     <div class="input_bar">
                         <div class="id-pw_bar">
-                            <input type="text" name="user_id" id="id" class="int" placeholder="아이디">
+                            <input type="text" name="user_id" id="userid" class="int check" placeholder="아이디">
+                        </div>
+                        <div class="pw_error">
+                            <?php include "id_check.php"; ?>
                         </div>
                         <div class="id-pw_bar">
                             <input type="password" name="user_pw" id="pswd1" class="int" placeholder="비밀번호">
@@ -106,6 +110,22 @@
                 x.type = "password";
             }
         }
+
+        $(document).ready(function(e) { 
+	        $(".check").on("keyup", function(){ //check라는 클래스에 입력을 감지
+	        	var self = $(this); 
+	        	var userid; 
+            
+	        	if(self.attr("id") === "userid"){ 
+	        		userid = self.val(); 
+	        	} 
+            
+	        	$.post( //post방식으로 id_check.php에 입력한 userid값을 넘깁니다
+	        		"id_check.php",
+	        		{ userid : userid }
+                );
+            });
+        });
     </script>
 </body>
 </html>

@@ -61,10 +61,6 @@ session_start();
         <div class="post_content">
             <?php echo nl2br("$board[content]"); ?>
         </div>
-        <div class="post_image">
-            <?php if(!empty($board['path'])) {?> <img src="<?php $board['path'].$board['image']?>" alt="이미지"> <?php }
-            else {?> <span>이미지 없음</span> <?php }?> 
-        </div>
     </div>
 	<!-- 목록, 수정, 삭제 -->
 	<div class="bar_wrap">

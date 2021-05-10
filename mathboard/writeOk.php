@@ -21,22 +21,17 @@ $filetype = $_FILES['image']['type'];
 $filename = iconv("UTF-8", "EUC-KR",$_FILES['image']['name']);
 $folder = $filepath.$filename;
 move_uploaded_file($tmpfile,$folder);
-print_r($folder);
-echo "<br/>";
-print_r($_FILES);
-echo "<br/>";
-print_r($_SERVER['DOCUMENT_ROOT']);
 
-// if($username && $title && $content){
-//     $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$filepath."','".$o_name."')");     
-//     echo "<script>
-//     alert('글쓰기 완료되었습니다.');
-//     location.href='mathboard.php';
-//     </script>";
-// }
-//     else{
-//     echo "<script>
-//     alert('글쓰기에 실패했습니다.');
-//     history.back();</script>";
-// }
+if($username && $title && $content){
+    $sql = mq("insert into mathboard(name,title,content,date,lock_post,path,image) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$filepath."','".$o_name."')");     
+    echo "<script>
+    alert('글쓰기 완료되었습니다.');
+    location.href='mathboard.php';
+    </script>";
+}
+    else{
+    echo "<script>
+    alert('글쓰기에 실패했습니다.');
+    history.back();</script>";
+}
 ?>

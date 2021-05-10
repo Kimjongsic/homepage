@@ -45,9 +45,6 @@
                 <div class="write_bar">
                     <textarea name="content" id="ucontent" required></textarea>
                 </div>
-                <div class="image_bar">
-                    <input type="file" name="image">
-                </div>
             </div>
         </div>
         <div class="submit_btn">
