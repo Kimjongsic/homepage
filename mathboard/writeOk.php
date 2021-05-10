@@ -16,6 +16,8 @@ if(isset($_POST['lockpost'])){
 	$lo_post = '0';
 }
 
+$mqq = mq("alter table board auto_increment =1"); //auto_increment 값 초기화
+
 if($username && $title && $content){
     $sql = mq("insert into mathboard(name,title,content,date,lock_post,id) values('".$username."','".$title."','".$content."','".$date."','".$lo_post."','".$userid."')");     
     echo "<script>
