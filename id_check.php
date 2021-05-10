@@ -24,16 +24,14 @@ function mq($sql) {
 		echo "<style type='text/css'>
                 .id_check {
                     color: rgb(234, 67, 53);
-                    font-size: 12px;
                 }
-            </style> 이미 사용중인 아이디입니다.";
+            </style> <span class='idMsg'>이미 사용중인 아이디입니다.</span>";
 	} else {
 		echo "<style type='text/css'>
                 .id_check {
                     color: rgb(52, 168, 83);
-                    font-size: 12px;
                 }
-            </style> 사용가능한 아이디입니다.";
+            </style> <span class='idMsg'>사용가능한 아이디입니다.</span>";
 	}
 }
 ?>

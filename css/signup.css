@@ -102,6 +102,16 @@ select {
 .int:focus::placeholder{
     color: transparent;
 }
+.id_check {
+    display: flex;
+    justify-content: flex-start;
+    width: 322px;
+    height: 15px;
+    font-size: 12px;
+}
+.idMsg {
+    padding-left: 8px;
+}
 #pswd1 {
     width: 280px;
 }
