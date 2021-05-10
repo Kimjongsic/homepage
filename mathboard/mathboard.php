@@ -78,7 +78,7 @@ session_start();
         <?php }?>
     </table>
     <div class="page_num_wrap">
-        <div id="page_num">
+        <div class="page_num">
             <?php
               for($i=$block_start; $i<=$block_end; $i++){ 
                 //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
