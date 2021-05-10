@@ -21,10 +21,10 @@
                 <form action="signupProcess.php" method="post">
                     <div class="input_bar">
                         <div class="id-pw_bar">
-                            <input type="text" name="user_id" id="userid" class="int check" placeholder="아이디">
+                            <input type="text" name="user_id" id="userid" class="int check" placeholder="아이디" onkeyup='idcheck();'>
                         </div>
                         <div class="pw_error">
-                            <?php include "id_check.php"; ?>
+                            <input type="hidden" id="uid">
                         </div>
                         <div class="id-pw_bar">
                             <input type="password" name="user_pw" id="pswd1" class="int" placeholder="비밀번호">
@@ -111,21 +111,24 @@
             }
         }
 
-        $(document).ready(function(e) { 
-	        $(".check").on("keyup", function(){ //check라는 클래스에 입력을 감지
-	        	var self = $(this); 
-	        	var userid; 
-            
-	        	if(self.attr("id") === "userid"){ 
-	        		userid = self.val(); 
-	        	} 
-            
-	        	$.post( //post방식으로 id_check.php에 입력한 userid값을 넘깁니다
-	        		"id_check.php",
-	        		{ userid : userid }
-                );
-            });
-        });
+        var idcheck = function() {
+            var self = document.getElementByClassName('check');
+            var userid;
+
+            if(self.attr('id') === "userid") {
+                userid = self.val();
+            }
+
+            var form = document.createElement('form');
+            form.setAttribute('method','post');
+            form.setAttribute('action','id_check.php');
+            document.charset = "utf-8";
+            var hidden = document.getElementById('uid');
+            var input = hidden.append('userid');
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
     </script>
 </body>
 </html>
