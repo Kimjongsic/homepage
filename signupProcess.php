@@ -14,9 +14,6 @@ $userpw = $_POST['user_pw'];
 $userpwcf = $_POST['user_pw_confirm'];
 $hashedPassword = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 echo $hashedPassword;
-$sql = "INSERT INTO members(id, pw, name, birthday, gender) VALUES('{$_POST['user_id']}', '{$hashedPassword}', '{$_POST['user_name']}', '{$_POST['user_year']}', '{$_POST['user_gender']}')";
-echo $sql;
-$result = mysqli_query($conn, $sql);
 
 $id_check = mq("select * from members where id='$userid'");
 	$id_check = $id_check->fetch_array();
@@ -26,6 +23,9 @@ $id_check = mq("select * from members where id='$userid'");
         echo "<script>alert('비밀번호가 일치하지 않습니다.'); history.back();</script>";
     }
     else{
+        $sql = "INSERT INTO members(id, pw, name, birthday, gender) VALUES('{$_POST['user_id']}', '{$hashedPassword}', '{$_POST['user_name']}', '{$_POST['user_year']}', '{$_POST['user_gender']}')";
+        echo $sql;
+        $result = mysqli_query($conn, $sql);
         if ($result === false) {
             echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
             echo mysqli_error($conn);
