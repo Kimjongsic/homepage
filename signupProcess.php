@@ -15,7 +15,7 @@ $userpwcf = $_POST['user_pw_confirm'];
 $hashedPassword = password_hash($_POST['user_pw'], PASSWORD_DEFAULT);
 echo $hashedPassword;
 
-$id_check = mq("select * from members where id='$userid'");
+    $id_check = "SELECT * FROM members WHERE id='$userid'";
 	$id_check = $id_check->fetch_array();
 	if($id_check >= 1){
 		echo "<script>alert('아이디가 중복됩니다.'); history.back();</script>";
