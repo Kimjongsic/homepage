@@ -100,7 +100,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50.4px;
+    height: 50.4px;
+    margin-bottom: 100px;
 }
 .page_num {
     position: absolute;
@@ -109,7 +110,7 @@ h1 {
     align-items: center;
     text-align: center;
     width: 970.4px;
-    margin-top: 16px;
+    margin: 8px 0;
 }
 .page_num a:hover, .page_num strong {
     text-decoration: none;
