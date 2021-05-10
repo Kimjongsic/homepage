@@ -23,6 +23,7 @@
                         <div class="id-pw_bar">
                             <input type="text" name="user_id" id="userid" class="int check" placeholder="아이디">
                         </div>
+                        <div class="id_check"></div>
                         <div class="id-pw_bar">
                             <input type="password" name="user_pw" id="pswd1" class="int" placeholder="비밀번호">
                             <i id="pswd1View" class="far fa-eye" onclick="pwViewer()"></i>
@@ -122,8 +123,8 @@
 	        		{ userid : userid }, 
 	        		function(data){ 
 	        			if(data){ //만약 data값이 전송되면
-	        				self.parent().parent().find("div").html(data); //div태그를 찾아 html방식으로 data를 뿌려줍니다.
-	        				self.parent().parent().find("div").css("color", "#F00"); //div 태그를 찾아 css효과로 빨간색을 설정합니다
+	        				self.parent().parent().find("div.id_check").html(data); //div태그를 찾아 html방식으로 data를 뿌려줍니다.
+	        				self.parent().parent().find("div.id_check").css("color", "rgb(234, 67, 53)"); //div 태그를 찾아 css효과로 빨간색을 설정합니다
 	        			}
 	        		}
 	        	);
