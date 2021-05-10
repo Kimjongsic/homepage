@@ -125,7 +125,7 @@
             document.charset = "utf-8";
             var hidden = document.getElementById('uid');
             var input = hidden.append('userid');
-            form.appendChild(input);
+            form.append(input);
             document.body.appendChild(form);
             form.submit();
         }
