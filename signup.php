@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="gender_bar">
-                            <select name="user_gender" id="gender" class="gen_sel">
+                            <select name="user_gender" id="gender" class="gen_sel" required>
                                 <option value selected>성별</option>
                                 <option value="M">남자</option>
                                 <option value="F">여자</option>
