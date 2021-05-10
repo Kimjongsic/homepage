@@ -144,7 +144,23 @@ h1 {
         font-size: 12px;
         margin: 0;
     }
+    .page_num_wrap{
+        margin-bottom: 50px;
+    }
+    .page_num{
+        width: 100%;
+    }
+    .page_num a:hover, .page_num strong {
+        font-size: 12px;
+    }
+    .page_num a {
+        font-size: 12px;
+    }
+    .btn_div {
+        width: 100%;
+    }
     #btn_wrap {
+        width: 100%;
         margin: 8px 0;
     }
     .write_btn {
