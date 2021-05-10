@@ -8,7 +8,7 @@ $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
 
 	if($_POST['userid'] != NULL){
-	$id_check = mq("select * from member where id='{$_POST['userid']}'");
+	$id_check = mq("select * from members where id='{$_POST['userid']}'");
 	$id_check = $id_check->fetch_array();
 	
 	if($id_check >= 1){
