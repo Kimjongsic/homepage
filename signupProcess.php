@@ -33,13 +33,5 @@ if($id_check >= 1){
 }
 else{
     $sql = mq("insert into members(id,pw,name,birthday,gender) values('".$userid."','".$hashedPassword."','".$username."','".$useryear."','".$usersex."')");
-    echo $sql;
-    $result = mysqli_query($conn, $sql);
-    echo $result;
-    if ($result === false) {
-        echo "저장에 문제가 생겼습니다. 관리자에게 문의해주세요.";
-        echo mysqli_error($conn);
-    } else {
-        echo "<script>alert('회원가입이 완료되었습니다.'); location.href='login.php';</script>";
-    }
-}?>
+    echo "<script>alert('회원가입이 완료되었습니다.'); location.href='login.php';</script>";
+    }?>
