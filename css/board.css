@@ -44,6 +44,10 @@ h1 {
     color: rgb(66, 133, 244);
     font-weight: bold;
 }
+.list-table tbody tr a:hover {
+    color: rgb(66, 133, 244);
+    font-weight: bold;
+}
 .list-table td.list-num {
     text-align: center;
 }

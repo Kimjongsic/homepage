@@ -22,11 +22,17 @@ session_start();
         .list-table tbody tr:hover {
             color: rgb(251, 188, 5);
         }
+        .list-table tbody tr a:hover {
+            color: rgb(251, 188, 5);
+        }
         .write_btn {
             background-color: rgb(251, 188, 5);
         }
         .write_btn:hover {
             box-shadow: 0px 2px 10px 0px rgba(251,188,5,0.6);
+        }
+        .page_num a:hover, .page_num strong {
+            color: rgb(251, 188, 5);
         }
     </style>
 </head>
@@ -48,8 +54,26 @@ session_start();
             <th class="list-hit" width="100">조회수</th>
         </thead>
         <?php
+            if(isset($_GET['page'])){
+                $page = $_GET['page'];
+                  }else{
+                    $page = 1;
+                  }
+                    $sql = mq("select * from sciboard");
+                    $row_num = mysqli_num_rows($sql); //게시판 총 레코드 수
+                    $list = 10; //한 페이지에 보여줄 개수
+                    $block_ct = 5; //블록당 보여줄 페이지 개수
+      
+                    $block_num = ceil($page/$block_ct); // 현재 페이지 블록 구하기
+                    $block_start = (($block_num - 1) * $block_ct) + 1; // 블록의 시작번호
+                    $block_end = $block_start + $block_ct - 1; //블록 마지막 번호
+      
+                    $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
+                    if($block_end > $total_page) $block_end = $total_page; //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
+                    $total_block = ceil($total_page/$block_ct); //블럭 총 개수
+                    $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
             // mathboard에서 상위 10개
-          $sql2 = mq("select * from sciboard order by num desc limit 0, 10");
+          $sql2 = mq("select * from sciboard order by num desc limit $start_num, $list");
           while($sciboard = $sql2->fetch_array()) {
           //title변수에 DB에서 가져온 title을 선택
           $title=$sciboard['title']; 
@@ -73,9 +97,23 @@ session_start();
         </tbody>
         <?php }?>
     </table>
-    <div class="btn_div">
-        <div id="btn_wrap">
-            <a class="write_btn" href="write.php">글쓰기</a>
+    <div class="page_num_wrap">
+        <div class="page_num">
+            <?php
+              for($i=$block_start; $i<=$block_end; $i++){ 
+                //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
+                if($page == $i){ //만약 page가 $i와 같다면 
+                  echo "<strong>$i</strong>"; //현재 페이지에 해당하는 번호에 굵은 빨간색을 적용한다
+                }else{
+                  echo "<a href='?page=$i'>$i</a>"; //아니라면 $i
+                }
+              }
+            ?>
+        </div>
+        <div class="btn_div">
+            <div id="btn_wrap">
+                <a class="write_btn" href="write.php">글쓰기</a>
+            </div>
         </div>
     </div>
 </body>
